@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#075985">
+<title>Học viện An toàn số | Phiên bản 2.5</title>
+<style>
+:root{--navy:#0b2545;--blue:#087ea4;--cyan:#dff6ff;--teal:#0f766e;--gold:#f5b942;--ink:#172b4d;--muted:#5f7188;--paper:#f4f8fc;--white:#fff;--line:#dce6ef;--red:#b42318;--green:#16794b;--shadow:0 12px 32px rgba(11,37,69,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:0 20px}.topbar{background:var(--navy);color:white;padding:13px 0}.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand-mini{font-weight:800;letter-spacing:.3px}.topbar small{color:#c9e7f4}.hero{background:linear-gradient(120deg,#092747,#075985 58%,#0f766e);color:white;padding:42px 0 38px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:320px;height:320px;border:1px solid #ffffff28;border-radius:50%;right:-80px;top:-120px;box-shadow:0 0 0 35px #ffffff0b,0 0 0 70px #ffffff08}.hero-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:28px;align-items:center;position:relative;z-index:1}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#a5f3fc}.hero h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.08;margin:10px 0 12px;letter-spacing:-1px}.hero p{font-size:1.08rem;color:#e0f2fe;max-width:650px}.hero-art{background:#ffffff13;border:1px solid #ffffff2b;border-radius:26px;padding:25px;text-align:center;backdrop-filter:blur(4px)}.shield{font-size:5rem;line-height:1}.hero-art strong{display:block;font-size:1.2rem;margin-top:12px}.hero-art span{font-size:.9rem;color:#d6f5ff}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:750;transition:.15s;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--gold);color:#342100}.btn-light{background:white;color:var(--navy)}.btn-outline{border:1px solid var(--line);background:white;color:var(--ink)}.btn-dark{background:var(--navy);color:white}.btn-small{padding:7px 11px;font-size:.88rem;border-radius:9px}.section{padding:30px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:18px}.section h2{font-size:clamp(1.35rem,3vw,2rem);margin:0;letter-spacing:-.4px}.sub{color:var(--muted);margin:5px 0 0}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 10px;background:#e0f2fe;color:#075985;font-size:.82rem;font-weight:750}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-18px;position:relative;z-index:2}.stat{background:white;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;padding:15px 18px}.stat b{font-size:1.45rem;display:block}.stat span{font-size:.88rem;color:var(--muted)}.stations{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.station{background:white;border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:0 5px 16px #0b254508;display:flex;flex-direction:column;min-height:225px}.station .emoji{font-size:2rem}.station h3{margin:10px 0 4px;font-size:1.08rem}.station p{color:var(--muted);font-size:.93rem;margin:0 0 15px;flex:1}.station .btn{width:100%}.station.done{border-color:#8dd6b2;background:linear-gradient(white,#f2fff7)}.station.done .pill{background:#dcfce7;color:#166534}.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 5px 16px #0b254508}.panel h3{margin:0 0 8px}.progressbar{height:10px;border-radius:99px;background:#e7eef5;overflow:hidden}.progressbar div{height:100%;background:linear-gradient(90deg,#087ea4,#0f9d8a);width:0%;transition:.25s}.note{font-size:.9rem;color:var(--muted)}.badge-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.badge-item{background:#fff7df;border:1px solid #f5d98b;color:#76520a;border-radius:12px;padding:8px 10px;font-weight:700;font-size:.88rem}.badge-locked{filter:grayscale(1);opacity:.45}.footer{background:var(--navy);color:#d7e8f5;padding:25px 0;margin-top:25px}.footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer small{max-width:650px}.modal-backdrop{position:fixed;inset:0;background:#07182bd9;display:none;align-items:center;justify-content:center;padding:16px;z-index:50}.modal-backdrop.show{display:flex}.modal{width:min(760px,100%);max-height:92vh;overflow:auto;background:white;border-radius:20px;box-shadow:0 25px 90px #0005}.modal-head{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);padding:17px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:2}.modal-head h2{font-size:1.15rem;margin:0}.modal-body{padding:20px}.close{border:0;background:#eef4f8;border-radius:10px;width:38px;height:38px;font-size:1.25rem}.question-count{font-size:.86rem;color:var(--muted);font-weight:700}.question{font-size:1.2rem;font-weight:800;margin:10px 0 18px}.options{display:grid;gap:10px}.option{display:flex;gap:11px;align-items:flex-start;border:1px solid var(--line);border-radius:13px;padding:13px;text-align:left;background:white;color:var(--ink);width:100%}.option:hover{border-color:#60a5fa;background:#f7fbff}.option.selected{border-color:#0284c7;background:#eaf8ff}.option.correct{border-color:#16a34a;background:#effdf4}.option.wrong{border-color:#dc2626;background:#fff3f2}.letter{width:28px;height:28px;border-radius:8px;background:#edf3f8;display:grid;place-items:center;font-weight:800;flex-shrink:0}.feedback{margin-top:15px;border-radius:13px;padding:13px 15px;display:none}.feedback.show{display:block}.feedback.good{background:#eafaf0;color:#14532d;border:1px solid #a7e3ba}.feedback.bad{background:#fff2f0;color:#7f1d1d;border:1px solid #ffc5bd}.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}.result{text-align:center;padding:12px}.result .big{font-size:3rem;font-weight:900;color:#075985;line-height:1.2}.result h3{font-size:1.5rem;margin:12px 0 5px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:5px}.field label{font-size:.9rem;font-weight:750}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd8e5;border-radius:10px;padding:10px;background:white}.field.full{grid-column:1/-1}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{background:#f2f7fb}.hidden{display:none!important}.warning{border-left:4px solid #eab308;background:#fffbeb;padding:12px 14px;border-radius:8px;color:#713f12}.success{border-left:4px solid #16a34a;background:#f0fdf4;padding:12px 14px;border-radius:8px;color:#14532d}.tiny{font-size:.8rem;color:var(--muted)}.linklike{background:none;border:0;color:#075985;text-decoration:underline;padding:0;font-weight:700}
+
+/* CVA 2.0 visual refresh */
+:root{--navy:#102a43;--blue:#087ea4;--cyan:#dff6ff;--teal:#0f766e;--gold:#ffd166;--ink:#142b4a;--muted:#61758b;--paper:#f2f7fb;--white:#fff;--line:#d8e4ef;--red:#b42318;--green:#16794b;--shadow:0 14px 36px rgba(16,42,67,.10)}
+body{background:radial-gradient(ellipse at 8% 12%,#e1f5fb 0,transparent 28%),radial-gradient(ellipse at 92% 35%,#e7f7ee 0,transparent 24%),var(--paper)}
+.topbar{background:rgba(10,35,63,.97);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);box-shadow:0 4px 18px #102a431c}
+.brand-mini{display:flex;align-items:center;gap:9px}.brand-mini:before{content:"DSA";display:inline-grid;place-items:center;width:42px;height:33px;border-radius:11px;background:linear-gradient(135deg,#ffd166,#ffecb3);color:#102a43;font-size:.76rem;font-weight:950}
+.hero{background:radial-gradient(circle at 78% 30%,#1594a8 0,transparent 28%),linear-gradient(120deg,#0a2545,#075985 58%,#0f766e);padding:52px 0 54px}
+.hero h1{font-size:clamp(2.25rem,5.2vw,4rem);text-wrap:balance}.hero p{line-height:1.75}
+.hero-art{border-radius:30px;background:linear-gradient(150deg,#ffffff22,#ffffff08);box-shadow:inset 0 1px 0 #ffffff40,0 20px 60px #001b3333}
+.shield{display:inline-grid;place-items:center;width:140px;height:140px;margin:auto;border-radius:42px;background:linear-gradient(145deg,#fff,#dff6ff);font-size:4.5rem;box-shadow:0 18px 36px #001b3333;transform:rotate(-3deg)}
+.btn-primary{background:linear-gradient(135deg,#ffd166,#ffe6a3);box-shadow:0 8px 18px #f5b94230}.btn-dark{background:linear-gradient(135deg,#0b2545,#087ea4)}
+.section{padding:36px 0}.section h2{letter-spacing:-.6px}.stat{border-radius:19px;box-shadow:0 12px 30px #0b25450b;transition:transform .2s}.stat:hover{transform:translateY(-2px)}
+.station{border-radius:22px;position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s;box-shadow:0 9px 25px #0b254509}
+.station:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#087ea4,#26b6a6)}
+.station:hover{transform:translateY(-4px);box-shadow:0 18px 34px #0b25451a;border-color:#b9dce9}
+.station .emoji{display:grid;place-items:center;width:56px;height:56px;border-radius:18px;background:linear-gradient(145deg,#e1f7ff,#f2fbff);font-size:1.8rem}
+.station h3{font-size:1.12rem}.panel{border-radius:22px;box-shadow:0 12px 30px #0b254509}.pill{background:#e0f7f7;color:#086d75}
+.footer{background:linear-gradient(120deg,#0a2545,#075985)}
+.scam-toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0 20px}
+.scam-search{flex:1;min-width:220px;border:1px solid var(--line);background:#fff;border-radius:13px;padding:12px 14px;outline:none}
+.scam-search:focus{border-color:#0891b2;box-shadow:0 0 0 3px #0891b21c}
+.filter-chip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:9px 13px;font-weight:750;font-size:.88rem}
+.filter-chip.active{background:#0b2545;color:#fff;border-color:#0b2545}
+.scam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.scam-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 22px #0b254509;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.scam-card:hover{transform:translateY(-3px);box-shadow:0 16px 30px #0b254516}
+.scam-band{padding:17px 18px 13px;background:linear-gradient(135deg,#eaf8ff,#f4fbff);border-bottom:1px solid #e0edf5}
+.scam-icon{font-size:1.8rem;display:inline-grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#fff;box-shadow:0 5px 14px #0b25450c;margin-bottom:9px}
+.scam-band h3{margin:0;font-size:1.05rem;line-height:1.35}
+.scam-content{padding:15px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.scam-content p{margin:0;color:var(--muted);font-size:.92rem}.scam-tag{font-size:.76rem;font-weight:800;color:#075985;background:#e0f2fe;border-radius:999px;padding:4px 8px;display:inline-block;margin-bottom:8px}
+.risk-line{font-size:.85rem;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:8px 10px}
+.scam-content .btn{width:100%;margin-top:auto}.scam-modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.scam-info{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fbfdff}.scam-info h4{margin:0 0 7px;font-size:.95rem}
+.scam-info ul{margin:0;padding-left:19px;color:#52677d;font-size:.92rem}
+.scam-quote{padding:16px;border-radius:14px;background:#fff7ed;border:1px solid #fed7aa;font-weight:700;color:#7c2d12}
+.callout-cyan{background:#ecfeff;border:1px solid #a5f3fc;color:#164e63;border-radius:13px;padding:13px}
+@media(max-width:900px){.scam-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.hero{padding:35px 0}.scam-grid{grid-template-columns:1fr}.scam-modal-grid{grid-template-columns:1fr}.scam-toolbar{gap:7px}.filter-chip{font-size:.82rem;padding:8px 10px}}
+
+@media(max-width:800px){.hero-grid,.two-col{grid-template-columns:1fr}.hero-art{display:none}.stations{grid-template-columns:repeat(2,1fr)}.stats{margin-top:12px}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:540px){.wrap{padding:0 14px}.stations{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:1/-1}.hero{padding:32px 0}.hero p{font-size:1rem}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.panel{padding:16px}.section{padding:24px 0}}
+@media print{.topbar,.hero,.actions,.station button,.footer,.no-print{display:none!important}body{background:white}.panel,.stat,.station{box-shadow:none;break-inside:avoid}.section{padding:12px 0}}
+
+/* CVA 2.1 - homepage introduction */
+.hero-grid{grid-template-columns:1.55fr .65fr;gap:34px}
+.hero-lead{max-width:760px!important;font-size:1rem!important;line-height:1.75!important;margin:13px 0;color:#e8f6ff!important}
+.hero-highlight{color:#ffe08a;text-shadow:0 4px 20px #001b3340}
+.hero-points{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+.hero-points span{border:1px solid #ffffff42;background:#ffffff12;border-radius:999px;padding:7px 11px;font-size:.86rem;font-weight:750;color:#f0fbff}
+.hero-motto{font-size:.95rem!important;font-weight:800;font-style:italic;color:#ffe8a8!important;margin-top:18px}
+.hero-art{position:relative}
+.hero-art:after{content:"";}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-lead{font-size:.97rem!important}.hero-points span{font-size:.8rem}.hero-art{display:none}}
+
+
+/* CVA 2.2 - concise, student-friendly hero */
+.hero-grid{grid-template-columns:1.35fr .75fr;gap:30px}
+.hero-lead.hero-short{font-size:1.08rem!important;line-height:1.5!important;margin:18px 0;color:#f0fbff!important;font-weight:650}
+.hero-grid h1{max-width:780px;line-height:1.08}
+.hero-points{margin:22px 0 8px;gap:10px}
+.hero-points span{padding:8px 14px;font-size:.9rem}
+.hero-motto{font-size:.95rem!important;font-weight:800;color:#ffe8a8!important;margin-top:22px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-lead.hero-short{font-size:1rem!important}.hero-art{display:none}}
+
+
+
+/* CVA 2.4 — centered, visual, curiosity-driven homepage */
+.topbar .brand-mini{display:flex;align-items:center;gap:10px}
+.mini-logo{width:34px;height:36px;display:grid;place-items:center;background:linear-gradient(135deg,#8ff3ff,#ffd76a);color:#073b62;border-radius:10px;flex-shrink:0}.mini-logo svg{width:27px;height:30px}
+.hero-v23{padding:28px 0 34px;background:radial-gradient(ellipse at 50% 48%,#0b7197 0%,#075985 42%,#082746 100%)}
+.hero-v23:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#ffffff22 1px,transparent 1px);background-size:28px 28px;opacity:.45;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
+.hero-center{position:relative;z-index:1;display:flex;align-items:center;flex-direction:column;text-align:center;max-width:1000px}
+.hero-logo{width:72px;height:72px;filter:drop-shadow(0 8px 18px #00172c66);animation:logoFloat 3.5s ease-in-out infinite}
+.hero-logo svg{width:100%;height:100%}
+.hero-v23 .eyebrow{margin-top:9px;color:#a5f3fc;letter-spacing:2.4px}
+.hero-v23 .hero-title{max-width:1000px;margin:12px 0 10px;font-size:clamp(2.2rem,5.5vw,4.5rem);line-height:1.08;letter-spacing:-1.7px;text-wrap:balance;text-shadow:0 4px 22px #00182c66}
+.hero-highlight{display:inline-block;color:#ffe17d;background:linear-gradient(90deg,#fff2a8,#ffd76a,#fff8d5,#ffd76a);background-size:250% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 3px 12px #ffc94738);animation:headlineShine 4s linear infinite}
+.hero-v23 .hero-short{max-width:760px;margin:10px auto 0;font-size:clamp(1rem,2vw,1.25rem)!important;font-weight:650;line-height:1.5!important;color:#f0fbff!important}
+.hero-v23 .hero-points{justify-content:center;margin:17px 0 0}
+.hero-v23 .hero-points span{background:#ffffff14;border:1px solid #ffffff45;color:#fff;box-shadow:0 5px 18px #001a2e1a}
+.hero-v23 .hero-actions{justify-content:center;margin-top:19px}
+.btn-hero{padding:13px 21px;border-radius:14px;box-shadow:0 8px 20px #001b3333}
+.btn-hero.btn-primary{background:linear-gradient(135deg,#ffe58b,#ffc947);color:#3d2a00}
+.btn-hero.btn-primary:hover{box-shadow:0 10px 26px #ffcf4f55;transform:translateY(-3px) scale(1.02)}
+.curiosity-art{position:relative;width:min(700px,100%);margin:14px auto 0;min-height:185px;display:flex;align-items:center;justify-content:center}
+.hero-illustration{position:relative;z-index:1;width:min(620px,100%);height:auto;overflow:visible;filter:drop-shadow(0 12px 22px #001a2b45);animation:artFloat 5s ease-in-out infinite}
+.art-glow{position:absolute;width:55%;height:90px;left:22.5%;bottom:18px;background:#41d9ff26;filter:blur(28px);border-radius:50%}
+.float-chip{position:absolute;z-index:2;padding:8px 13px;border-radius:14px;background:#fff;color:#10385b;font-size:.9rem;font-weight:850;box-shadow:0 10px 24px #00172d33;animation:chipBob 3.5s ease-in-out infinite}
+.chip-link{left:2%;top:25px;transform:rotate(-5deg)}
+.chip-gift{right:2%;top:18px;animation-delay:.7s;transform:rotate(4deg)}
+.chip-ai{right:7%;bottom:16px;animation-delay:1.2s}
+.art-caption{position:absolute;bottom:0;left:50%;transform:translateX(-50%);z-index:3;white-space:nowrap;font-size:.8rem;font-weight:800;color:#d8f8ff;letter-spacing:.4px}
+.hero-v23 .hero-motto{margin:18px 0 0;color:#d6f5ff!important;font-size:.9rem!important;font-weight:750}
+.hero-motto span{color:#ffd76a;padding:0 5px}
+@keyframes headlineShine{0%{background-position:0% center}100%{background-position:250% center}}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes artFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes chipBob{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@media(max-width:700px){.topbar small{display:none}.hero-v23{padding:24px 0 29px}.hero-logo{width:60px;height:60px}.hero-v23 .hero-title{font-size:clamp(2rem,9vw,3rem);letter-spacing:-.8px}.curiosity-art{min-height:145px;margin-top:20px}.hero-illustration{width:100%}.float-chip{font-size:.72rem;padding:6px 8px;border-radius:10px}.chip-link{left:0;top:8px}.chip-gift{right:0;top:3px}.chip-ai{right:0;bottom:7px}.art-caption{font-size:.68rem}.hero-v23 .hero-points span{font-size:.78rem;padding:7px 10px}.btn-hero{width:100%;max-width:330px}.hero-v23 .hero-actions{width:100%;align-items:center}}
+@media(prefers-reduced-motion:reduce){.hero-highlight,.hero-logo,.hero-illustration,.float-chip{animation:none!important;transition:none!important}}
+
+
+/* 2.5: quality and privacy fixes for use across schools */
+.brand-mini b{color:#ffe17d}.hero-art:after{content:""}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap"><div class="brand-mini"><span class="mini-logo" aria-hidden="true"><svg viewBox="0 0 32 36"><path d="M16 2L29 7V17C29 25 23 31 16 34C9 31 3 25 3 17V7Z" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M9 17l5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>HỌC VIỆN AN TOÀN SỐ</span></div><small>Hiểu biết số · Ứng xử đúng · An toàn mỗi ngày</small></div>
+</div>
+<header class="hero hero-v23">
+  <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+  <div class="wrap hero-center">
+    <div class="hero-logo" aria-label="Logo Học viện An toàn số">
+      <svg viewBox="0 0 100 100" role="img" aria-label="Biểu tượng khiên bảo vệ số">
+        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ff3ff"/><stop offset="1" stop-color="#ffd76a"/></linearGradient></defs>
+        <path d="M50 7 L84 20 V47 C84 69 69 84 50 94 C31 84 16 69 16 47 V20 Z" fill="url(#logoGrad)" stroke="#fff" stroke-width="3"/>
+        <path d="M50 18 L73 27 V47 C73 63 63 74 50 82 C37 74 27 63 27 47 V27 Z" fill="#073b62"/>
+        <path d="M39 49 L47 57 L63 39" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="76" cy="17" r="8" fill="#ffdf72"/><path d="M76 11v12M70 17h12" stroke="#073b62" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="eyebrow">HỌC VIỆN AN TOÀN SỐ</div>
+    <h1 class="hero-title">Đừng chỉ lướt Internet.<br><span class="hero-highlight">Hãy làm chủ thế giới số!</span></h1>
+    <p class="hero-lead hero-short">Em có đủ tỉnh táo để vượt qua những chiếc bẫy trên mạng không?</p>
+    <div class="hero-points"><span>🛡️ Bảo vệ mình</span><span>🕵️ Bóc tách bí ẩn</span><span>🤖 Thử thách AI</span></div>
+    <div class="actions hero-actions">
+      <button class="btn btn-primary btn-hero" onclick="startJourney()">🚀 Khám phá ngay</button>
+      <button class="btn btn-light btn-hero" onclick="document.getElementById('scamSection').scrollIntoView({behavior:'smooth'})">🔍 Săn dấu hiệu lừa đảo</button>
+    </div>
+    <div class="curiosity-art" aria-label="Minh họa thế giới số với khiên, robot, đường link bí ẩn và quà tặng">
+      <div class="float-chip chip-link">🔗 Link bí ẩn?</div>
+      <div class="float-chip chip-gift">🎁 Quà miễn phí?</div>
+      <div class="float-chip chip-ai">🤖 AI thật hay giả?</div>
+      <div class="art-glow"></div>
+      <svg class="hero-illustration" viewBox="0 0 620 230" role="img" aria-label="Minh họa học sinh khám phá thế giới số an toàn">
+        <defs>
+          <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+          <linearGradient id="robotGrad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#c7f9ff"/></linearGradient>
+        </defs>
+        <circle cx="310" cy="116" r="105" fill="#ffffff0b" stroke="#ffffff2a" stroke-dasharray="5 9"/>
+        <circle cx="310" cy="116" r="77" fill="#ffffff0a" stroke="#8be9ff55"/>
+        <path d="M310 38 L365 58 V105 C365 144 341 168 310 184 C279 168 255 144 255 105 V58 Z" fill="url(#shieldGrad)" stroke="#fff" stroke-width="3"/>
+        <path d="M310 56 L347 69 V105 C347 131 331 149 310 161 C289 149 273 131 273 105 V69 Z" fill="#075985"/>
+        <path d="M291 105 L304 118 L331 89" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        <g transform="translate(105 94)"><rect x="0" y="0" width="76" height="62" rx="18" fill="url(#robotGrad)" stroke="#fff" stroke-width="3"/><rect x="12" y="14" width="52" height="29" rx="10" fill="#075985"/><circle cx="27" cy="28" r="5" fill="#7df9e7"/><circle cx="49" cy="28" r="5" fill="#7df9e7"/><path d="M27 51h22" stroke="#087ea4" stroke-width="4" stroke-linecap="round"/><path d="M38 0v-12" stroke="#fff" stroke-width="4"/><circle cx="38" cy="-16" r="6" fill="#ffd76a"/></g>
+        <g transform="translate(430 100)"><circle cx="28" cy="26" r="28" fill="#ffd76a"/><path d="M11 27 L23 39 L46 12" fill="none" stroke="#073b62" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 59h48" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
+        <g fill="#fff"><path d="M211 47l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/><path d="M413 47l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><circle cx="225" cy="178" r="4"/><circle cx="405" cy="183" r="5"/></g>
+      </svg>
+      <div class="art-caption">Thử thách bản lĩnh công dân số!</div>
+    </div>
+    <p class="hero-motto">Hiểu biết số <span>•</span> Ứng xử đúng <span>•</span> An toàn mỗi ngày</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><b id="statCompleted">0/5</b><span>Trạm đã hoàn thành</span></div>
+    <div class="stat"><b id="statScore">0/100</b><span>Điểm hành trình cao nhất</span></div>
+    <div class="stat"><b id="statBadges">0</b><span>Huy hiệu đã nhận</span></div>
+  </div>
+  <section class="section" id="stationsSection">
+    <div class="section-head"><div><h2>🗺️ Bản đồ hành trình</h2><p class="sub">Chọn một trạm, đọc tình huống và quyết định cách xử lý.</p></div><span class="pill">Dành cho học sinh THCS</span></div>
+    <div class="stations" id="stations"></div>
+  </section>
+  <section class="section two-col">
+    <div class="panel">
+      <h2>🏅 Hồ sơ chiến binh số</h2>
+      <p class="sub">Tiến độ được lưu trên trình duyệt của thiết bị này.</p>
+      <div style="display:flex;justify-content:space-between;margin:18px 0 8px"><b>Tiến độ hành trình</b><b id="progressText">0%</b></div>
+      <div class="progressbar"><div id="progressFill"></div></div>
+      <div id="badgeList" class="badge-list"></div>
+      <p class="note" id="profileSummary">Bạn chưa nhập hồ sơ học tập. Có thể tham gia bằng biệt danh; không cần nhập họ tên thật.</p>
+      <div class="actions no-print">
+        <button class="btn btn-outline btn-small" onclick="openModal('profileModal')">Cập nhật hồ sơ</button>
+        <button class="btn btn-outline btn-small" onclick="resetProgress()">Làm lại hành trình</button>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>💡 5 nguyên tắc vàng</h2>
+      <ul>
+        <li>Không chia sẻ mật khẩu, mã OTP hoặc dữ liệu riêng tư.</li>
+        <li>Dừng lại và kiểm chứng khi gặp đường dẫn, lời mời đáng ngờ.</li>
+        <li>Đọc nguồn, ngày đăng và đối chiếu trước khi chia sẻ tin.</li>
+        <li>Tôn trọng người khác; không phát tán nội dung làm tổn thương.</li>
+        <li>Kiểm tra câu trả lời AI và không nhập thông tin bí mật.</li>
+      </ul>
+      <div class="warning"><b>Nhớ nhé!</b> Nếu gặp tình huống khiến em lo lắng, hãy dừng thao tác và tìm sự hỗ trợ từ giáo viên, cha mẹ hoặc người lớn đáng tin cậy.</div>
+    </div>
+  </section>
+
+  <section class="section" id="scamSection">
+    <div class="section-head"><div><span class="pill">🕵️ KHU VỰC MỚI · HỌC QUA TÌNH HUỐNG</span><h2 style="margin-top:10px">Góc bóc tách lừa đảo số</h2><p class="sub">Những kịch bản gần gũi với học sinh THCS. Nhận diện dấu hiệu, tìm bẫy và luyện cách xử lý an toàn.</p></div></div>
+    <div class="callout-cyan">🎯 <b>Nhiệm vụ của em:</b> Đừng vội bấm vào đường dẫn hay làm theo yêu cầu. Hãy tìm dấu hiệu đáng ngờ, dừng lại, xác minh và nhờ người lớn hỗ trợ khi cần. Đây là tình huống mô phỏng; không thử làm theo các yêu cầu đáng ngờ ngoài đời thật.</div>
+    <div class="scam-toolbar">
+      <input class="scam-search" id="scamSearch" type="search" placeholder="🔎 Tìm tình huống: game, OTP, trúng thưởng..." aria-label="Tìm tình huống lừa đảo">
+      <button class="filter-chip active" onclick="filterScams('all',this)">Tất cả</button><button class="filter-chip" onclick="filterScams('tài khoản',this)">Tài khoản</button><button class="filter-chip" onclick="filterScams('game',this)">Game & quà tặng</button><button class="filter-chip" onclick="filterScams('tiền',this)">Tiền & mua bán</button><button class="filter-chip" onclick="filterScams('mạng xã hội',this)">Mạng xã hội</button>
+    </div>
+    <div class="scam-grid" id="scamGrid"></div>
+    <p class="tiny" style="margin-top:12px">Tình huống mô phỏng phục vụ học tập; không sử dụng đường dẫn thật hoặc hướng dẫn thực hiện hành vi lừa đảo.</p>
+  </section>
+
+  <section class="section" id="teacherSection">
+    <div class="section-head"><div><h2>📊 Góc giáo viên</h2><p class="sub">Báo cáo dữ liệu đang lưu trên thiết bị hiện tại. Không phải hệ thống đồng bộ trực tuyến.</p></div><button class="btn btn-dark no-print" onclick="openTeacher()">Mở bảng điều khiển</button></div>
+    <div class="panel">
+      <p>Giáo viên có thể xuất kết quả thử nghiệm thành CSV để mở bằng Excel hoặc Google Sheets. Nếu học sinh dùng nhiều thiết bị khác nhau, kết quả sẽ không tự động tập trung tại đây; cần triển khai thêm máy chủ hoặc Google Apps Script để đồng bộ.</p>
+      <div class="actions no-print">
+        <button class="btn btn-outline btn-small" onclick="exportCurrentResult()">⬇️ Xuất kết quả lượt này (CSV)</button>
+        <button class="btn btn-outline btn-small" onclick="printReport()">🖨️ In báo cáo</button>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="panel">
+      <h2>📚 Thư viện kiến thức nhanh</h2>
+      <div class="two-col" style="margin-top:15px">
+        <div><h3>Trước khi nhấp vào đường dẫn</h3><p>Kiểm tra người gửi, tên miền, nội dung yêu cầu và dấu hiệu thúc ép. Khi nghi ngờ, không nhập thông tin; hãy tự mở trang chính thức hoặc hỏi người lớn.</p></div>
+        <div><h3>Khi sử dụng công cụ AI</h3><p>Không coi mọi câu trả lời là chính xác. Đối chiếu thông tin quan trọng, tôn trọng bản quyền và bảo vệ dữ liệu cá nhân.</p></div>
+      </div>
+      <p class="tiny">Sản phẩm phục vụ giáo dục và thực hành kỹ năng số; không thay thế tư vấn pháp lý hoặc quy trình xử lý sự cố chính thức.</p>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><div><b>HỌC VIỆN AN TOÀN SỐ</b><br><small>Sản phẩm giáo dục số đề xuất cho hoạt động hưởng ứng 20 ngày đẩy mạnh chuyển đổi số năm 2026.</small></div><small>Phiên bản cải tiến 2.6 · Có thể tùy chỉnh nội dung theo kế hoạch và quy định của nhà trường.</small></div></footer>
+
+<div class="modal-backdrop" id="quizModal" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+  <div class="modal"><div class="modal-head"><h2 id="quizTitle">Thử thách</h2><button class="close" onclick="closeModal('quizModal')" aria-label="Đóng">×</button></div><div class="modal-body" id="quizBody"></div></div>
+</div>
+<div class="modal-backdrop" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+  <div class="modal"><div class="modal-head"><h2 id="profileTitle">Hồ sơ học tập</h2><button class="close" onclick="closeModal('profileModal')" aria-label="Đóng">×</button></div>
+  <div class="modal-body"><div class="warning">Để bảo vệ quyền riêng tư, nên dùng biệt danh hoặc mã học sinh do giáo viên cấp; không nhập số điện thoại, địa chỉ nhà, mật khẩu hay thông tin nhạy cảm.</div>
+  <form id="profileForm" class="form-grid" style="margin-top:16px">
+    <div class="field"><label for="nickname">Biệt danh / mã học sinh</label><input id="nickname" maxlength="30" placeholder="Ví dụ: CVA7-01"></div>
+    <div class="field"><label for="classCode">Lớp (không bắt buộc)</label><input id="classCode" maxlength="20" placeholder="Ví dụ: 7.1"></div>
+    <div class="field full"><button class="btn btn-primary" type="submit">Lưu hồ sơ trên thiết bị</button></div>
+  </form></div></div>
+</div>
+<div class="modal-backdrop" id="teacherModal" role="dialog" aria-modal="true" aria-labelledby="teacherTitle">
+  <div class="modal"><div class="modal-head"><h2 id="teacherTitle">Bảng điều khiển giáo viên</h2><button class="close" onclick="closeModal('teacherModal')" aria-label="Đóng">×</button></div>
+  <div class="modal-body">
+    <div class="warning">Bảng này chỉ hiển thị kết quả đã lưu trên trình duyệt hiện tại. Không có đăng nhập bảo vệ hoặc đồng bộ nhiều thiết bị trong phiên bản này; không dùng như hệ thống quản lý điểm chính thức.</div>
+    <div class="stats" style="margin:15px 0">
+      <div class="stat"><b id="teacherCompleted">0/5</b><span>Trạm đã hoàn thành</span></div>
+      <div class="stat"><b id="teacherScore">0</b><span>Điểm cao nhất</span></div>
+      <div class="stat"><b id="teacherAccuracy">0%</b><span>Tỉ lệ đúng ước tính</span></div>
+    </div>
+    <h3>Kết quả theo trạm</h3><div class="table-wrap"><table><thead><tr><th>Trạm</th><th>Điểm</th><th>Số câu đúng</th><th>Trạng thái</th></tr></thead><tbody id="teacherTable"></tbody></table></div>
+    <div class="actions"><button class="btn btn-dark" onclick="exportCurrentResult()">⬇️ Xuất CSV</button><button class="btn btn-outline" onclick="printReport()">In báo cáo</button></div>
+  </div></div>
+</div>
+
+<div class="modal-backdrop" id="scamModal" role="dialog" aria-modal="true" aria-labelledby="scamModalTitle">
+ <div class="modal"><div class="modal-head"><h2 id="scamModalTitle">Tình huống lừa đảo số</h2><button class="close" onclick="closeModal('scamModal')" aria-label="Đóng">×</button></div><div class="modal-body" id="scamModalBody"></div></div>
+</div>
+
+<script>
+const scamCases = [
+
+{id:1,icon:"🎮",title:"Tặng Robux / skin game miễn phí",category:"game",tag:"Game & quà tặng",story:"Một tài khoản đăng trong nhóm lớp: “Nhập tên đăng nhập và mật khẩu vào trang nhận vật phẩm miễn phí. Chỉ hôm nay!”.",clues:["Quà quá hấp dẫn nhưng không rõ đơn vị tổ chức","Yêu cầu mật khẩu hoặc mã xác thực","Thúc ép làm ngay và dẫn tới trang lạ"],actions:["Không nhập mật khẩu hoặc OTP","Không tải tệp từ nguồn không rõ","Kiểm tra trên kênh chính thức và báo người lớn"],quiz:"Dấu hiệu nguy hiểm nhất là gì?",options:["Có hình nhân vật game","Yêu cầu mật khẩu/OTP để nhận quà","Có nhiều biểu tượng cảm xúc"],answer:1,why:"Không cung cấp mật khẩu hoặc OTP cho người khác để nhận quà."},
+{id:2,icon:"🔐",title:"Giả danh hỗ trợ lấy lại tài khoản",category:"tài khoản",tag:"Tài khoản",story:"Một người nhắn rằng tài khoản sắp bị khóa và yêu cầu gửi mã OTP để “xác minh danh tính”.",clues:["Tạo cảm giác khẩn cấp","Xin mã OTP, mật khẩu hoặc mã khôi phục","Không hướng dẫn tự vào kênh hỗ trợ chính thức"],actions:["Không cung cấp OTP/mật khẩu","Tự mở ứng dụng hoặc trang chính thức để kiểm tra","Báo người lớn; đổi mật khẩu nếu đã lỡ chia sẻ"],quiz:"Người lạ yêu cầu mã OTP. Em nên:",options:["Gửi để tài khoản không bị khóa","Chụp mã gửi vào nhóm lớp","Từ chối và kiểm tra kênh chính thức"],answer:2,why:"OTP là mã xác thực riêng tư; người khác có thể dùng mã để truy cập tài khoản."},
+{id:3,icon:"🎁",title:"Trúng thưởng nhưng phải đóng phí",category:"tiền",tag:"Tiền & quà tặng",story:"Tin nhắn báo em trúng điện thoại nhưng phải chuyển khoản phí trước và gửi thông tin cá nhân.",clues:["Không tham gia chương trình nhưng vẫn trúng","Yêu cầu chuyển tiền hoặc cung cấp dữ liệu","Thúc ép nhận quà gấp"],actions:["Không chuyển tiền hoặc gửi giấy tờ","Kiểm tra chương trình qua kênh chính thức","Lưu tin nhắn và nhờ người lớn hỗ trợ"],quiz:"Cách xử lý an toàn nhất là:",options:["Chuyển khoản nhỏ để thử","Kiểm chứng qua kênh chính thức, không chuyển tiền theo tin nhắn lạ","Gửi thông tin của cha mẹ"],answer:1,why:"Yêu cầu trả phí bất thường để nhận phần thưởng không rõ nguồn gốc là dấu hiệu đáng ngờ."},
+{id:4,icon:"📦",title:"Tin nhắn giao hàng giả",category:"tiền",tag:"Mua bán & giao hàng",story:"Em nhận tin: “Đơn hàng bị giữ, thanh toán một khoản phí tại đường dẫn này để giao lại”, dù em không nhớ đã đặt hàng.",clues:["Thông tin đơn hàng không khớp","Đường dẫn lạ, có thể giả mạo đơn vị giao hàng","Yêu cầu nhập thông tin thẻ hoặc OTP"],actions:["Không nhấp đường dẫn trong tin nhắn","Hỏi người thân xem có đơn hàng thật không","Tự tra cứu qua ứng dụng/kênh chính thức"],quiz:"Muốn kiểm tra đơn hàng, em nên:",options:["Bấm link trong tin nhắn","Tự mở ứng dụng/kênh chính thức","Nhập thông tin thẻ của cha mẹ"],answer:1,why:"Tự mở kênh chính thức giúp tránh trang giả mạo."},
+{id:5,icon:"👩‍🏫",title:"Giả danh giáo viên trong nhóm lớp",category:"tài khoản",tag:"Mạo danh",story:"Một tài khoản dùng ảnh đại diện giống giáo viên nhắn riêng, yêu cầu gửi mã xác minh hoặc chuyển tiền mua tài liệu gấp.",clues:["Tài khoản hoặc số liên lạc lạ dù ảnh quen","Yêu cầu bí mật, tiền hoặc mã xác thực","Không xác nhận qua kênh liên lạc đã biết"],actions:["Không chuyển tiền hoặc gửi mã","Xác minh với giáo viên qua kênh đã biết","Báo quản trị nhóm và người lớn"],quiz:"Cách xác minh phù hợp nhất là:",options:["Chỉ nhìn ảnh đại diện","Làm theo vì người đó biết tên lớp","Liên hệ giáo viên qua kênh đã xác thực"],answer:2,why:"Ảnh và tên hiển thị có thể bị sao chép; hãy xác minh qua kênh đã biết."},
+{id:6,icon:"📱",title:"Tài khoản bạn thân nhờ vay tiền",category:"mạng xã hội",tag:"Mạo danh bạn bè",story:"Tài khoản của bạn thân nhắn rằng đang gặp chuyện gấp, xin chuyển tiền ngay và dặn không gọi điện.",clues:["Tạo áp lực thời gian và yêu cầu giữ bí mật","Đề nghị chuyển tiền ngay","Tránh xác minh bằng cuộc gọi"],actions:["Không chuyển tiền ngay","Gọi số quen thuộc hoặc hỏi trực tiếp bạn","Báo người lớn nếu nghi tài khoản bị chiếm"],quiz:"Điều nên làm trước khi chuyển tiền là:",options:["Xác minh qua kênh khác đã biết","Chuyển trước để giúp bạn","Đăng công khai thông tin của bạn"],answer:0,why:"Tài khoản bạn có thể bị chiếm quyền; cần xác minh độc lập trước khi hành động."},
+{id:7,icon:"🎟️",title:"Vé hoặc vật phẩm game giá rẻ bất thường",category:"game",tag:"Mua bán trực tuyến",story:"Một trang không rõ nguồn rao bán vé/vật phẩm game giá rẻ bất thường, yêu cầu chuyển khoản trước và không cho kiểm tra.",clues:["Giá thấp bất thường, thúc ép thanh toán","Người bán không có lịch sử đáng tin","Yêu cầu chuyển tiền ngoài nền tảng"],actions:["Tra cứu người bán và điều kiện giao dịch","Không chuyển tiền vì sợ hết hàng","Nhờ cha mẹ kiểm tra trước khi mua"],quiz:"Dấu hiệu nào đáng cảnh giác nhất?",options:["Có mô tả sản phẩm","Giá bất thường và người bán không xác minh được","Có nhiều màu sắc"],answer:1,why:"Giá bất thường kết hợp áp lực thời gian và người bán không rõ ràng làm tăng nguy cơ."},
+{id:8,icon:"🧑‍💻",title:"Làm nhiệm vụ nhận tiền",category:"tiền",tag:"Việc làm giả",story:"Một tài khoản mời em thả tim/xem video nhận tiền, sau đó yêu cầu nạp tiền để mở nhiệm vụ có thưởng cao hơn.",clues:["Hứa thu nhập dễ dàng","Yêu cầu nạp tiền trước để nhận tiền","Có thể rủ thêm người tham gia"],actions:["Không nạp tiền hoặc cung cấp dữ liệu ngân hàng","Dừng liên hệ và lưu bằng chứng","Báo cha mẹ/giáo viên"],quiz:"Khi bị yêu cầu nạp tiền để nhận thưởng lớn hơn, em nên:",options:["Nạp thêm để lấy lại tiền","Rủ bạn cùng tham gia","Dừng lại, không nạp thêm và báo người lớn"],answer:2,why:"Yêu cầu nộp tiền trước để mở khóa thu nhập là dấu hiệu rủi ro cao."},
+{id:9,icon:"🗣️",title:"Giọng nói giả mạo người thân bằng AI",category:"mạng xã hội",tag:"Mạo danh bằng AI",story:"Đoạn ghi âm có giọng giống người thân yêu cầu chuyển tiền gấp và dặn không nói với ai.",clues:["Tạo cảm giác hoảng sợ hoặc khẩn cấp","Yêu cầu chuyển tiền và giữ bí mật","Chỉ dựa vào giọng nói mà chưa xác minh"],actions:["Bình tĩnh, không chuyển tiền ngay","Gọi số quen thuộc hoặc xác minh qua kênh khác","Báo người lớn đáng tin cậy"],quiz:"Khi nghi ngờ giọng nói bị giả mạo, em nên:",options:["Chuyển tiền vì giọng rất giống","Xác minh qua kênh khác và báo người lớn","Gửi thông tin ngân hàng"],answer:1,why:"Âm thanh có thể bị làm giả; hãy xác minh bằng kênh độc lập."},
+{id:10,icon:"🔗",title:"Link bình chọn hoặc nhận quà giả",category:"mạng xã hội",tag:"Đường dẫn giả",story:"Một tài khoản gửi link “bình chọn cho bạn” hoặc “nhận quà trường học”, yêu cầu đăng nhập mạng xã hội.",clues:["Địa chỉ trang không thuộc kênh chính thức","Yêu cầu đăng nhập không rõ lý do","Bạn bè có thể gửi link do tài khoản bị chiếm"],actions:["Không nhập thông tin qua link lạ","Xác minh với người gửi bằng kênh khác","Nếu đã nhập, đổi mật khẩu qua trang chính thức và báo người lớn"],quiz:"Một người bạn gửi link lạ. Em nên:",options:["Tin ngay vì là bạn","Đăng nhập để xem trước","Xác minh người gửi và kiểm tra địa chỉ trang"],answer:2,why:"Tài khoản bạn có thể bị chiếm; cần xác minh người gửi và trang trước khi đăng nhập."}
+];
+let activeScamFilter="all";
+function renderScams(){const q=(document.getElementById("scamSearch")?.value||"").toLowerCase().trim();const list=scamCases.filter(s=>(activeScamFilter==="all"||s.category===activeScamFilter)&&(`${s.title} ${s.story} ${s.tag} ${s.clues.join(" ")}`).toLowerCase().includes(q));const grid=document.getElementById("scamGrid");if(!grid)return;grid.innerHTML=list.map(s=>`<article class="scam-card"><div class="scam-band"><div class="scam-icon">${s.icon}</div><span class="scam-tag">${s.tag}</span><h3>${s.title}</h3></div><div class="scam-content"><p>${esc(s.story)}</p><div class="risk-line">🚩 ${esc(s.clues[0])}</div><button class="btn btn-dark btn-small" onclick="openScam(${s.id})">Bóc tách tình huống →</button></div></article>`).join("")||`<div class="panel" style="grid-column:1/-1">Không tìm thấy tình huống phù hợp.</div>`;}
+function filterScams(filter,button){activeScamFilter=filter;document.querySelectorAll(".filter-chip").forEach(b=>b.classList.toggle("active",b===button));renderScams();}
+function openScam(id){const s=scamCases.find(x=>x.id===id);if(!s)return;document.getElementById("scamModalTitle").textContent=s.icon+" "+s.title;document.getElementById("scamModalBody").innerHTML=`<div class="scam-quote">“${esc(s.story)}”</div><div class="scam-modal-grid"><div class="scam-info"><h4>🚩 Dấu hiệu đáng ngờ</h4><ul>${s.clues.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><div class="scam-info"><h4>🛡️ Cách xử lý an toàn</h4><ul>${s.actions.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div></div><div class="panel" style="margin-top:14px;background:#f7fbff"><div class="question-count">THỬ THÁCH NHANH</div><div class="question" style="font-size:1.05rem">${esc(s.quiz)}</div><div class="options">${s.options.map((o,i)=>`<button class="option" id="scamOpt${i}" onclick="answerScam(${s.id},${i})"><span class="letter">${"ABC"[i]}</span><span>${esc(o)}</span></button>`).join("")}</div><div class="feedback" id="scamFeedback"></div></div><div class="callout-cyan" style="margin-top:14px">💙 Quy tắc nhớ nhanh: <b>DỪNG LẠI – KIỂM CHỨNG – HỎI NGƯỜI TIN CẬY.</b></div>`;openModal("scamModal");}
+function answerScam(id,choice){const s=scamCases.find(x=>x.id===id),feedback=document.getElementById("scamFeedback");s.options.forEach((_,i)=>{const b=document.getElementById("scamOpt"+i);b.disabled=true;if(i===s.answer)b.classList.add("correct");else if(i===choice)b.classList.add("wrong");});feedback.className="feedback show "+(choice===s.answer?"good":"bad");feedback.innerHTML=`<b>${choice===s.answer?"Chính xác!":"Chưa chính xác."}</b> ${esc(s.why)}`;}
+
+const stations = [
+ {id:1,title:"Lá chắn dữ liệu",subtitle:"Bảo vệ thông tin cá nhân",emoji:"🔐",desc:"Nhận diện yêu cầu đáng ngờ và bảo vệ tài khoản.",badge:"Người giữ chìa khóa"},
+ {id:2,title:"Thám tử chống lừa đảo",subtitle:"Nhận diện nguy cơ",emoji:"🕵️",desc:"Tìm dấu hiệu lừa đảo và chọn cách phản ứng an toàn.",badge:"Thám tử cảnh giác"},
+ {id:3,title:"Săn tin giả",subtitle:"Kiểm chứng thông tin",emoji:"🔎",desc:"Đánh giá nguồn tin trước khi tin hoặc chia sẻ.",badge:"Thám tử sự thật"},
+ {id:4,title:"Công dân số văn minh",subtitle:"Ứng xử có trách nhiệm",emoji:"💬",desc:"Giải quyết tình huống giao tiếp và bắt nạt trực tuyến.",badge:"Người lan tỏa tử tế"},
+ {id:5,title:"Người dùng AI thông minh",subtitle:"AI có trách nhiệm",emoji:"🤖",desc:"Kiểm chứng kết quả AI và sử dụng công nghệ có trách nhiệm.",badge:"Người dùng AI tỉnh táo"}
+];
+const questions = [
+[
+ {q:"Một người tự xưng là nhân viên hỗ trợ yêu cầu em gửi mã OTP để xác minh tài khoản. Em nên làm gì?",a:["Gửi ngay vì họ nói là nhân viên hỗ trợ","Không cung cấp OTP; tự kiểm tra qua kênh chính thức","Gửi mã nếu họ biết tên em","Đăng mã vào nhóm lớp để hỏi"],c:1,e:"Mã OTP có thể cho phép người khác truy cập tài khoản. Không cung cấp mã xác thực cho người khác."},
+ {q:"Mật khẩu nào an toàn hơn?",a:["12345678","ngaysinhcuatoi","CVA@2026","Một cụm mật khẩu dài, khó đoán và không dùng lại"],c:3,e:"Cụm mật khẩu dài, khó đoán, không tái sử dụng và có xác thực nhiều lớp khi có thể sẽ an toàn hơn."},
+ {q:"Em muốn đăng ảnh chụp bảng điểm có tên và thông tin của các bạn lên mạng. Cách nào phù hợp?",a:["Đăng công khai để khoe thành tích","Che thông tin cá nhân và xin phép phù hợp trước khi chia sẻ","Gửi cho người lạ nhờ chỉnh ảnh","Đăng vào mọi nhóm"],c:1,e:"Cần tôn trọng quyền riêng tư, hạn chế thông tin nhận diện và xin phép phù hợp trước khi chia sẻ."},
+ {q:"Khi dùng máy tính công cộng để đăng nhập tài khoản, em nên làm gì sau khi sử dụng?",a:["Lưu mật khẩu để lần sau nhanh hơn","Để nguyên tài khoản đăng nhập","Đăng xuất, không lưu mật khẩu và đóng phiên làm việc","Chia sẻ tài khoản cho người dùng tiếp theo"],c:2,e:"Đăng xuất và không lưu thông tin đăng nhập giúp giảm nguy cơ người khác truy cập tài khoản."}
+],
+[
+ {q:"Tin nhắn thông báo em trúng quà nhưng phải đóng phí và nhập thông tin qua đường dẫn lạ. Em nên làm gì?",a:["Làm ngay vì quà có thời hạn","Nhập thông tin giả để thử","Không bấm đường dẫn; kiểm tra qua kênh chính thức và hỏi người lớn","Chuyển tiếp cho bạn bè"],c:2,e:"Lời hứa trúng thưởng kèm yêu cầu đóng phí hoặc nhập dữ liệu qua đường dẫn lạ là dấu hiệu cần cảnh giác."},
+ {q:"Một người lạ gọi điện yêu cầu cài ứng dụng để nhận hỗ trợ tài khoản. Cách xử lý tốt nhất là gì?",a:["Cài ngay theo hướng dẫn","Dừng lại, không cấp quyền và xác minh qua kênh chính thức","Cho phép điều khiển từ xa","Gửi ảnh màn hình có mã xác thực"],c:1,e:"Không cài ứng dụng hoặc cấp quyền điều khiển theo yêu cầu chưa xác minh. Hãy liên hệ đơn vị chính thức."},
+ {q:"Em lỡ nhấp vào một đường dẫn đáng ngờ và đã nhập mật khẩu. Việc nên làm đầu tiên là gì?",a:["Bỏ qua vì có thể không sao","Đăng thông tin lên mạng hỏi mọi người","Dùng thiết bị an toàn để đổi mật khẩu, kiểm tra phiên đăng nhập và báo người lớn","Tiếp tục nhập mã OTP nếu được yêu cầu"],c:2,e:"Cần nhanh chóng bảo vệ tài khoản bằng cách đổi mật khẩu qua kênh chính thức, kiểm tra phiên đăng nhập và nhờ hỗ trợ."},
+ {q:"Dấu hiệu nào cần đặc biệt cảnh giác trong một tin nhắn?",a:["Có tên người gửi quen thuộc nhưng nội dung bình thường","Thúc ép hành động ngay, đòi tiền hoặc thông tin bí mật","Có lời chào lịch sự","Có thông tin đã được xác minh qua kênh chính thức"],c:1,e:"Sự thúc ép, yêu cầu tiền hoặc dữ liệu bí mật và đường dẫn lạ là các dấu hiệu đáng ngờ."}
+],
+[
+ {q:"Một bài đăng gây sốc được chia sẻ rất nhiều nhưng không dẫn nguồn. Em nên làm gì?",a:["Chia sẻ ngay vì nhiều người đã chia sẻ","Đọc bình luận rồi kết luận","Kiểm tra nguồn, ngày đăng và đối chiếu với nguồn đáng tin cậy","Tin nếu có hình ảnh"],c:2,e:"Lượt chia sẻ và hình ảnh không đủ chứng minh độ chính xác. Cần kiểm tra nguồn và đối chiếu thông tin."},
+ {q:"AI đưa ra một con số thống kê nhưng không nêu nguồn. Cách nào phù hợp?",a:["Dùng ngay vì AI trả lời rất tự tin","Đối chiếu với nguồn đáng tin cậy trước khi sử dụng","Tự ghi một nguồn bất kỳ","Chia sẻ để người khác kiểm tra hộ"],c:1,e:"AI có thể tạo ra thông tin sai hoặc nguồn không có thật. Cần xác minh trước khi dùng."},
+ {q:"Khi kiểm tra một bài viết, yếu tố nào hữu ích nhất?",a:["Tiêu đề càng giật gân càng đáng tin","Chỉ xem số lượt thích","Kiểm tra tác giả/đơn vị đăng, thời điểm, bằng chứng và nguồn độc lập","Tin vì người đăng là bạn"],c:2,e:"Nguồn đăng, thời điểm, bằng chứng và đối chiếu độc lập giúp đánh giá thông tin tốt hơn."},
+ {q:"Em phát hiện bài viết mình chia sẻ có thông tin sai. Em nên làm gì?",a:["Xóa hoặc đính chính, thông báo cho người đã nhận nếu cần","Giữ nguyên vì ngại","Đổ lỗi cho người khác","Chia sẻ tiếp để tranh luận"],c:0,e:"Đính chính kịp thời giúp hạn chế lan truyền thông tin sai và thể hiện trách nhiệm số."}
+],
+[
+ {q:"Bạn cùng lớp bị đăng ảnh chế giễu trong nhóm chat. Em nên làm gì?",a:["Chia sẻ lại cho vui","Thêm bình luận xúc phạm","Không phát tán; hỗ trợ bạn và báo người lớn đáng tin cậy khi cần","Tạo ảnh chế mới"],c:2,e:"Không tiếp tay phát tán nội dung gây tổn thương. Hãy hỗ trợ người bị ảnh hưởng và tìm sự trợ giúp phù hợp."},
+ {q:"Em bất đồng với một bạn trên mạng. Cách phản hồi phù hợp là gì?",a:["Công kích ngoại hình","Đăng thông tin riêng tư của bạn","Trình bày ý kiến lịch sự, tập trung vào vấn đề và dừng tranh cãi khi cần","Rủ người khác vào tấn công"],c:2,e:"Ứng xử văn minh là tôn trọng người khác, không công kích cá nhân hoặc phát tán thông tin riêng tư."},
+ {q:"Một người đăng ảnh của em mà chưa hỏi ý kiến. Em không thoải mái. Em nên làm gì?",a:["Bình tĩnh đề nghị gỡ ảnh, lưu bằng chứng nếu cần và nhờ người lớn hỗ trợ","Đăng thông tin riêng tư của người đó","Đe dọa người đăng","Bỏ qua trong mọi trường hợp"],c:0,e:"Em có thể trao đổi rõ ràng, đề nghị gỡ nội dung và tìm sự hỗ trợ phù hợp nếu tình huống tiếp diễn."},
+ {q:"Khi chứng kiến hành vi bắt nạt trực tuyến, điều nào không nên làm?",a:["Lưu lại bằng chứng phù hợp","Báo giáo viên hoặc người lớn đáng tin cậy","Chia sẻ nội dung để tăng lượt xem","Hỗ trợ người bị ảnh hưởng"],c:2,e:"Phát tán nội dung có thể làm tổn thương lan rộng hơn. Không chia sẻ thêm nội dung bắt nạt."}
+],
+[
+ {q:"AI trả lời một câu hỏi lịch sử rất thuyết phục nhưng không có nguồn. Em nên làm gì?",a:["Chép nguyên văn","Đối chiếu với sách giáo khoa hoặc nguồn đáng tin cậy","Tin vì câu trả lời dài","Yêu cầu AI tự khẳng định là đúng"],c:1,e:"AI có thể sai. Cần đối chiếu với tài liệu đáng tin cậy và kiểm tra các dữ kiện quan trọng."},
+ {q:"Thông tin nào không nên nhập vào một công cụ AI công cộng khi chưa được phép?",a:["Một câu hỏi kiến thức chung","Đề bài đã công khai","Mật khẩu, mã OTP hoặc hồ sơ riêng tư của người khác","Một yêu cầu giải thích khái niệm"],c:2,e:"Không đưa mật khẩu, mã xác thực hoặc dữ liệu cá nhân/bí mật vào công cụ khi chưa được phép."},
+ {q:"Em dùng AI hỗ trợ viết bài. Cách sử dụng có trách nhiệm là gì?",a:["Nộp nguyên văn và nhận toàn bộ là của mình","Kiểm tra nội dung, chỉnh sửa bằng hiểu biết của mình và thực hiện yêu cầu trích dẫn/ghi nhận phù hợp","Yêu cầu AI bịa nguồn","Dùng AI để sao chép bài của bạn"],c:1,e:"AI có thể hỗ trợ học tập, nhưng người học cần hiểu, kiểm chứng, chỉnh sửa và tôn trọng quy định về học thuật, bản quyền."},
+ {q:"AI tạo hình ảnh giống một bạn học trong tình huống gây xấu hổ. Em nên làm gì?",a:["Đăng công khai để đùa","Gửi vào nhóm khác","Không phát tán; tôn trọng quyền riêng tư và báo người lớn nếu gây hại","Dùng AI tạo thêm ảnh"],c:2,e:"Không phát tán nội dung có thể gây tổn hại hoặc xâm phạm quyền riêng tư của người khác."}
+]
+];
+const KEY='digitalSafetyAcademyV1';
+let state={profile:{nickname:'',classCode:''},results:{},current:null,idx:0,answers:[],revealed:false,sessionCorrect:0};
+function loadState(){try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');state.profile=x.profile||state.profile;state.results=x.results||{};}catch(e){}}
+function saveState(){localStorage.setItem(KEY,JSON.stringify({profile:state.profile,results:state.results}));}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function renderStations(){document.getElementById('stations').innerHTML=stations.map(s=>{const r=state.results[s.id];return `<article class="station ${r?'done':''}"><div class="emoji">${s.emoji}</div><div style="margin-top:8px">${r?'<span class="pill">✓ Đã hoàn thành</span>':'<span class="pill">Trạm '+s.id+'</span>'}</div><h3>${s.title}</h3><p>${s.desc}<br><b>${r?'Điểm gần nhất: '+r.score+'/20':'4 câu hỏi · 20 điểm'}</b></p><button class="btn ${r?'btn-outline':'btn-dark'}" onclick="startStation(${s.id})">${r?'Luyện tập lại':'Vào thử thách'} →</button></article>`}).join('');}
+function renderDashboard(){const done=Object.keys(state.results).length;const score=Object.values(state.results).reduce((n,r)=>n+r.score,0);const badges=Object.values(state.results).filter(r=>r.score>=15).length;document.getElementById('statCompleted').textContent=done+'/5';document.getElementById('statScore').textContent=score+'/100';document.getElementById('statBadges').textContent=badges;document.getElementById('progressText').textContent=Math.round(done/5*100)+'%';document.getElementById('progressFill').style.width=(done/5*100)+'%';document.getElementById('badgeList').innerHTML=stations.map(s=>{const r=state.results[s.id];return `<span class="badge-item ${r&&r.score>=15?'':'badge-locked'}">${r&&r.score>=15?'🏅':'🔒'} ${s.badge}</span>`}).join('');document.getElementById('profileSummary').textContent=state.profile.nickname?`Chiến binh: ${state.profile.nickname}${state.profile.classCode?' · Lớp '+state.profile.classCode:''}. Kết quả được lưu trên trình duyệt này; không tự đồng bộ sang thiết bị khác.`:'Bạn chưa nhập hồ sơ học tập. Có thể tham gia bằng biệt danh; không cần nhập họ tên thật.';renderStations();}
+function startJourney(){document.getElementById('stationsSection').scrollIntoView({behavior:'smooth'});if(!state.profile.nickname)openModal('profileModal');}
+function startStation(id){state.current=id;state.idx=0;state.answers=[];state.revealed=false;state.sessionCorrect=0;renderQuestion();openModal('quizModal');}
+function renderQuestion(){const s=stations.find(x=>x.id===state.current);const qs=questions[state.current-1];if(state.idx>=qs.length){finishStation();return;}const q=qs[state.idx];const picked=state.answers[state.idx];document.getElementById('quizTitle').textContent=s.emoji+' Trạm '+s.id+': '+s.title;document.getElementById('quizBody').innerHTML=`<div class="question-count">CÂU ${state.idx+1}/${qs.length} · Mỗi câu đúng 5 điểm</div><div class="progressbar" style="margin-top:9px"><div style="width:${(state.idx/qs.length)*100}%"></div></div><div class="question">${q.q}</div><div class="options">${q.a.map((a,i)=>{let cls='option';if(state.revealed&&i===q.c)cls+=' correct';else if(state.revealed&&i===picked&&i!==q.c)cls+=' wrong';else if(!state.revealed&&i===picked)cls+=' selected';return `<button class="${cls}" ${state.revealed?'disabled':''} onclick="chooseAnswer(${i})"><span class="letter">${'ABCD'[i]}</span><span>${esc(a)}</span></button>`}).join('')}</div><div class="feedback ${state.revealed?'show '+(picked===q.c?'good':'bad'):''}">${state.revealed?`<b>${picked===q.c?'Chính xác!':'Chưa chính xác.'}</b> ${q.e}`:''}</div><div class="quiz-controls"><button class="btn btn-outline" onclick="closeModal('quizModal')">Thoát</button>${state.revealed?`<button class="btn btn-primary" onclick="nextQuestion()">${state.idx===qs.length-1?'Xem kết quả':'Câu tiếp theo →'}</button>`:`<button class="btn btn-primary" onclick="checkAnswer()" ${picked===undefined?'disabled':''}>Kiểm tra đáp án</button>`}</div>`;}
+function chooseAnswer(i){if(state.revealed)return;state.answers[state.idx]=i;renderQuestion();}
+function checkAnswer(){if(state.answers[state.idx]===undefined)return;state.revealed=true;if(state.answers[state.idx]===questions[state.current-1][state.idx].c)state.sessionCorrect++;renderQuestion();}
+function nextQuestion(){state.idx++;state.revealed=false;renderQuestion();}
+function finishStation(){const id=state.current;const score=state.sessionCorrect*5;const old=state.results[id];state.results[id]={score:Math.max(score,old?.score||0),lastScore:score,correct:state.sessionCorrect,total:4,completedAt:new Date().toISOString()};saveState();renderDashboard();const s=stations[id-1];const label=score>=15?'Tuyệt vời! Em đã nhận huy hiệu trạm.':score>=10?'Khá tốt! Hãy xem lại lời giải để tiến bộ hơn.':'Đừng nản nhé! Hãy ôn lại kiến thức và thử sức lần nữa.';document.getElementById('quizTitle').textContent='🏁 Hoàn thành trạm '+id;document.getElementById('quizBody').innerHTML=`<div class="result"><div style="font-size:3rem">${score>=15?'🏅':'🌱'}</div><div class="big">${score}<span style="font-size:1.1rem">/20</span></div><h3>${label}</h3><p>Em trả lời đúng ${state.sessionCorrect}/4 câu ở lượt này.</p><p class="note">${score>=15?'Huy hiệu: '+s.badge:'Huy hiệu sẽ mở khóa khi đạt từ 15/20 điểm.'}</p><div class="actions" style="justify-content:center"><button class="btn btn-primary" onclick="closeModal('quizModal');document.getElementById('stationsSection').scrollIntoView({behavior:'smooth'})">Về bản đồ</button><button class="btn btn-outline" onclick="startStation(${id})">Luyện tập lại</button></div></div>`;}
+function openModal(id){document.getElementById(id).classList.add('show');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('show');document.body.style.overflow='';}
+document.querySelectorAll('.modal-backdrop').forEach(el=>el.addEventListener('click',e=>{if(e.target===el)closeModal(el.id)}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-backdrop.show').forEach(m=>closeModal(m.id));});
+document.getElementById('profileForm').addEventListener('submit',e=>{e.preventDefault();state.profile={nickname:document.getElementById('nickname').value.trim(),classCode:document.getElementById('classCode').value.trim()};saveState();renderDashboard();closeModal('profileModal');});
+function openTeacher(){const done=Object.keys(state.results).length;const total=Object.values(state.results).reduce((n,r)=>n+r.score,0);const correct=Object.values(state.results).reduce((n,r)=>n+r.correct,0);document.getElementById('teacherCompleted').textContent=done+'/5';document.getElementById('teacherScore').textContent=total;document.getElementById('teacherAccuracy').textContent=done?Math.round(correct/(done*4)*100)+'%':'0%';document.getElementById('teacherTable').innerHTML=stations.map(s=>{const r=state.results[s.id];return `<tr><td>${s.id}. ${s.title}</td><td>${r?r.score+'/20':'—'}</td><td>${r?r.correct+'/4':'—'}</td><td>${r?'Đã làm':'Chưa làm'}</td></tr>`}).join('');openModal('teacherModal');}
+function csvEscape(v){return '"'+String(v??'').replace(/"/g,'""')+'"';}
+function exportCurrentResult(){const rows=[['Học viện An toàn số - Báo cáo trên thiết bị hiện tại'],['Biệt danh',state.profile.nickname],['Lớp',state.profile.classCode],['Thời điểm xuất',new Date().toLocaleString('vi-VN')],[],['Mã trạm','Tên trạm','Điểm tốt nhất/20','Điểm lượt gần nhất/20','Số câu đúng lượt gần nhất','Tổng câu','Trạng thái']];stations.forEach(s=>{const r=state.results[s.id];rows.push([s.id,s.title,r?.score??'',r?.lastScore??'',r?.correct??'',4,r?'Đã hoàn thành':'Chưa làm'])});rows.push([],['Lưu ý','Dữ liệu chỉ phản ánh trình duyệt hiện tại; không phải dữ liệu tập trung nhiều thiết bị.']);const csv='\ufeff'+rows.map(r=>r.map(csvEscape).join(',')).join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Bao_cao_Hoc_vien_An_toan_so.csv';a.click();URL.revokeObjectURL(url);}
+function printReport(){openTeacher();setTimeout(()=>window.print(),250);}
+function resetProgress(){if(!confirm('Xóa tiến độ đã lưu trên trình duyệt này và bắt đầu lại?'))return;state.results={};saveState();renderDashboard();}
+loadState();renderScams();document.getElementById('scamSearch').addEventListener('input',renderScams);document.getElementById('nickname').value=state.profile.nickname||'';document.getElementById('classCode').value=state.profile.classCode||'';renderDashboard();
+</script>
+</body>
+</html>
